@@ -18,18 +18,13 @@ const App = () => {
         date: Date.now()
       }
       setMessData((prevData) => [...prevData, mess]);
-
-
+  // Logique d'envoie de données, on ne peut pas remettre la valeur a 0 en typescript comme en React pour le useRef.
+  (document.getElementById("inputMessage") as HTMLInputElement).value = "";
     }
 
-    setMessData([{
-      id: 23,
-      message: "coucou",
-      date: 24012024
-    }]);
 
-    // Logique d'envoie de données, on ne peut pas remettre la valeur a 0 en typescript comme en React pour le useRef.
-    (document.getElementById("inputMessage") as HTMLInputElement).value = "";
+
+  
   }
 
   return (
